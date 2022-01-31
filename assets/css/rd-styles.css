@@ -1,0 +1,46 @@
+#rdstation-bricks-embeddable-form-bricks-component-Yo4hBZdj3tX9u6bnUSZvXA .bricks--section,
+#rd-section-kw3nkm0f,
+#rd-column-kw3nkm0l > div 
+{
+    background-color: transparent !important;
+}
+#rd-row-kw3nkm0g .bricks--column>div,
+#rd-row-kw3nkm0g .bricks--column>div {
+    max-height: 120px !important;
+    min-height: 120px !important;
+    background: transparent;
+}
+#rd-button-kw3nkm0p {
+    border:none !important;
+    padding: 0.3em !important;
+}
+#rd-button-kw3nkm0p:hover,
+#rd-button-kw3nkm0p:focus 
+{
+    background-color: #1B1B1B;
+    border: none;
+    outline: none;
+}
+#rd-text-kw3nkm0i,
+#rd-text-kw3nkm0j strong,
+strong
+{
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: bold;
+    font-size: 23px;
+}
+.bricks-form__fieldset {
+    margin-top: -7em !important;
+}
+@media (max-width:992px) {
+    .bricks-form__fieldset {
+        margin-top: 3em !important;
+    }       
+}
+#rd-form-kw3nkm0m label.error {
+    color: #fff !important;
+    font-size: 20px !important;
+    line-height: 1.1;
+    padding: 9px 0 0 4px !important;
+    background: #FD585D;
+}

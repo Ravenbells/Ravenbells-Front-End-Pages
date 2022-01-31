@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/***         FONTS-FAMILY         ***/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/***         PALLET         ***/
+$color-white: #fff;
+$color-grey: #707070;
+$color-light-grey: #DDDDDD; 
+$color-light-2-grey: #E5E5E5;
+$color-smooth-grey: #A2A2A2;
+$color-smooth-2-grey: #C7C7C7;
+$color-smooth-3-grey: #9D9D9D;
+$color-dark-grey: #1B1B1B;
+$color-black: #000000;
+$color-salmon: #FD585D;
+
+/***      IMAGES BACKGROUND      ***/
+$bgrd-red-1x: url("../img/png/red-bgrd-1x.png");
+$bgrd-red-2x: url("../img/png/red-bgrd-2x.png");
+$bgrd-black-1x: url("../img/png/blackground-3x.png");
+$bgrd-black-2x: url("../img/png/blackground-2x.png");
+$img-sale-1x: url("../img/png/desconto-1x.png");
+$img-sale-2x: url("../img/png/desconto-2x.png");
+$img-borderline: url("../img/png/contornos-1x.png");
+
+
+/***      IMAGES PAYMENTS      ***/
+$icon-hipercard-1x: url("../img/png/hipercard-1x.png");
+$icon-hipercard-2x: url("../img/png/hipercard-2x.png");
+$icon-visa-1x: url("../img/png/visa-1x.png");
+$icon-visa-2x: url("../img/png/visa-2x.png");
+$icon-mastercard-1x: url("../img/png/mastercard-1x.png");
+$icon-mastercard-2x: url("../img/png/mastercard-2x.png");
+$icon-cabal-1x: url("../img/png/cabal-1x.png");
+$icon-cabal-2x: url("../img/png/cabal-2x.png");
+$icon-elo-1x: url("../img/png/elo-1x.png");
+$icon-elo-2x: url("../img/png/elo-2x.png");
+$icon-hiper-1x: url("../img/png/hiper-1x.png");
+$icon-hiper-2x: url("../img/png/hiper-2x.png");
+$icon-jcb-1x: url("../img/png/jcb-1x.png");
+$icon-jcb-2x: url("../img/png/jcb-2x.png");
+$icon-banescard-1x: url("../img/png/banescard-1x.png");
+$icon-banescard-2x: url("../img/png/banescard-2x.png");
+$icon-sorocred-1x: url("../img/png/sorocred-1x.png");
+$icon-sorocred-2x: url("../img/png/sorocred-2x.png");
+$icon-american-1x: url('../img/png/american-express-1x.png');
+$icon-american-2x: url("../img/png/american-express-2x.png");
+$icon-dinersclub-1x: url("../img/png/dinersclub-1x.png");
+$icon-dinersclub-2x: url("../img/png/dinersclub-2x.png");
+$icon-debito-1x: url("../img/png/debito-1x.png");
+$icon-debito-2x: url("../img/png/debito-2x.png");
+$icon-pix-1x: url("../img/png/pix-1x.png");
+$icon-pix-2x: url("../img/png/pix-2x.png");
+$icon-vtex-1x: url("../img/png/vtex-1x.png");
+$icon-vtex-2x: url("../img/png/vtex-2x.png");
+$icon-google-1x: url("../img/png/google-1x.png");
+$icon-google-2x: url("../img/png/google-2x.png");
+$icon-jobs-1x: url("../img/png/agencia-jobs-1x.png");
+$icon-jobs-2x: url("../img/png/agencia-jobs-2x.png");
+$icon-abps-1x: url("../img/png/abps-1x.png");
+$icon-abps-2x: url("../img/png/abps-2x.png");
+
+/***      IMAGES SVG ICONS      ***/
+$arrow-slide-left: url("../img/svg/arrow-left.svg");
+$arrow-slide-right: url("../img/svg/arrow-right.svg");
