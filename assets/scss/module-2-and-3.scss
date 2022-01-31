@@ -1,0 +1,347 @@
+@use "mixins" as mix;
+
+@mixin backgrounds_2-3 {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+@mixin advantages-about {
+    text-align: center;
+    display: inline-block;
+}
+
+@mixin heading_1-text {
+    font-size: 4vw;
+    &:before,
+    &:after
+    {
+        content: "";
+        @include mix.background-prop;
+        background-size: contain;
+        position: relative;
+        display: inline-block;
+        padding-top: 1em;
+        top: -3.5vh;    
+    }
+}
+
+@mixin heading_2-text {
+    font-weight: 300;
+    font-size: 2vw;
+    display: block;
+}
+
+.background-clouds-green {
+    @include mix.background-prop;
+    @include backgrounds_2-3;
+    background-image: mix.$clouds-green;
+    padding-bottom: 9em;
+    @media (max-width: 993px) {
+        background-image: mix.$clouds-green-2;
+        background-position: top left;
+        padding-top: 65vw;
+    }
+    .advantages {
+        @include advantages-about;
+        padding-top: 7vh;
+        .heading-1 {
+            @include heading_1-text;
+            color: mix.$color-white-1;
+            &:before,
+            &:after
+            {
+                width: 2vw;
+                height: 2vw;
+            }
+            &:before {
+                background-image: mix.$quo-mark-white-l;
+            }
+            &:after {
+                background-image: mix.$quo-mark-white-r;
+            }
+            @media (max-width:1400px) {
+                font-size: 5vw;
+                &:before,
+                &:after {
+                    width: 4vw;
+                }
+            }
+            @media (max-width: 993px) {
+                font-size: 9vw;
+                &:before,
+                &:after {
+                    width: 8vw;
+                }
+            }
+        }
+        .heading-2 {
+            @include heading_2-text;
+            color: mix.$color-moss;
+            @media (max-width:1400px) {
+                font-size: 3vw;
+                font-weight: 400;
+            }
+            @media (max-width: 993px) {
+                font-size: 7vw;
+            }
+        }
+    }
+    .advantages-bubbles-pos {
+        padding: 0 9em;
+        @media (max-width: 1400px) {
+            padding: 0 1em;
+        }
+        @media (max-width: 993px) {
+            flex-direction: column;
+            padding: 0 5em;
+        }
+        .advantages-bubbles {
+            position: relative;
+            background-color: mix.$color-white-1;
+            border-radius: 50px;
+            width: 28%;
+            height: auto;
+            padding: 5em 0em 3em 0em;
+            top: 1em;
+            box-shadow: 5px 5px 5px mix.$color-low-black;
+            @media (max-width:993px) {
+                width: 100%;
+                margin-bottom: 3em;
+            }
+            @media (max-width: 767px) {
+                padding: 1em 0em 3em 0em;
+            }
+            .icon {
+                @include mix.background-prop;
+                background-size: contain;
+                position: relative;
+                width: 100%;
+                height: 10vw;
+                bottom: 0em;
+                margin-bottom: 3em;
+                @media (max-width:993px) {
+                    height: 30vw;
+                }
+                @media (max-width: 767px) {
+                    height: 20vw;
+                    margin-bottom: 1em;
+                }
+            }
+            .icon.clock-img {
+                background-image: mix.$bubble-clock;
+            }
+            .icon.star-img {
+                background-image: mix.$bubble-star;
+            }
+            .icon.price-img {
+                background-image: mix.$bubble-price;
+            }
+           .description,
+           .description.highlight 
+           {
+                display: block;
+                text-align: center;
+                padding-right: 1vw;
+                padding-left: 1vw;
+           }
+           .description {
+               font-weight: 300;
+               font-size: 1.2vw;
+               color: mix.$color-grass-2;
+               @media (max-width: 993px) {
+                   font-size: 3vh;
+                }
+               @media (max-width: 767px) {
+                    font-size: 3vw;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+           }
+           .description.highlight {
+               font-size: 3vh;
+               color: mix.$color-grass-1;
+               @media (max-width: 1400px) {
+                   font-size: 2.5vh;
+               }
+               @media (max-width: 993px) {
+                    font-size: 6vh;
+                }
+                @media (max-width: 767px) {
+                    font-size: 5vw;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                }
+            }
+        }
+    }  
+}
+.background-white {
+    @include backgrounds_2-3;
+    background-color: mix.$color-white-1;
+    .about {
+        @include advantages-about;
+        padding-top: 7vh;
+        .heading-1 {
+            @include heading_1-text;
+            color: mix.$color-grass-1;
+            &:before,
+            &:after {
+                height: 1.8vw;
+            }
+            &:before {
+                background-image: mix.$quo-mark-green-l;
+                width: 2.5vw;
+            }
+            &:after {
+                background-image: mix.$quo-mark-green-r;
+                width: 3vw;
+                right: 1vw;
+            }
+            @media (max-width: 993px) {
+                font-size: 10vw;
+                &:before,
+                &:after {
+                    top: -2.5vh;
+                }
+                &:before {
+                    width: 7vw;
+                }
+                &:after {
+                    width: 8vw;
+                }
+            }
+        }
+        .heading-2 {
+            @include heading_2-text;
+            font-weight: 700;
+            color: mix.$color-moss;
+            @media (max-width: 993px) {
+                font-size: 6vw;
+                padding: 0 4em 0 4em;
+            }
+        }
+        .decoration-pos {
+            .dog-pink-decoration,
+            .heart-green-decoration,
+            .cat-green-decoration {
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .dog-pink-decoration {
+                @media (min-width: 993px) {
+                    background-image: mix.$dog-pink-2;
+                    position: absolute;
+                    float: left;
+                    left: 0.8em;
+                    width: 28vh;
+                    height: 36vh;
+                    margin-top: -11vh;
+                    @media (max-width: 1400px) {
+                        left: -1.2em;
+                        margin-top: -25vh;
+                    }
+                }
+            }
+            .heart-green-decoration {
+                background-image: mix.$heart-green;
+                position: absolute;
+                margin-top: -6vw;
+                width: 38vw;
+                height: 15vh;
+                float: right;
+                right: -10vw;
+                @media (max-width: 993px) {
+                    display: none;
+                }
+            }
+            .cat-green-decoration {
+                background-image: mix.$green-cat-1x;
+                position: static;
+                margin-top: -5em;
+                margin-bottom: 3em;
+                width: 36vh;
+                height: 30vh;
+                float: right;
+                @media (max-width: 1400px) {
+                    left: -1.2em;
+                }
+                @media (min-width: 993px) {
+                    background-image: mix.$green-cat-2x;
+                }
+                @media (max-width: 993px) {
+                    position: relative;
+                    margin-top: 4em;
+                    margin-bottom: 4em;
+                    margin-right: 3em;
+                    width: 42vh;
+                    height: 28vh;                   
+                    z-index: 2;
+                }
+                @media (max-width: 579px) {
+                    margin-right: 2em;
+                    width: 27vh;
+                    height: 18vh;
+                }
+                @media (max-width: 375px) {
+                    margin-right: 0;
+                    width: 22vh;
+                    height: 15vh;
+                }
+            }
+            .heart-green-decoration-mobile {
+                display: none;
+                @media (max-width: 993px) {
+                    @include mix.background-prop;
+                    background-size: contain;
+                    background-image: mix.$heart-green-2;
+                    display: block;
+                    position: absolute;
+                    margin-top: 8em;
+                    width: 59vh;
+                    height: 26vh;
+                    right: 18em;
+                    z-index: 1;
+                }
+                @media (max-width: 579px) {
+                    width: 48vh;
+                    height: 13vh;
+                    right: 10em;
+                }
+                @media (max-width: 375px) {
+                    width: 64vw;
+                    height: 10vh;
+                    right: 11em;
+                }
+            }
+        }
+        .description-pos {
+            text-align: center;
+            line-height: 2;
+            position: relative;
+            .description {
+                display: inline-block;
+                color: mix.$color-dark-grey;
+                font-weight: 400;
+                font-size: 2vh;
+                padding-top: 5em;
+                p {
+                    padding-left: 15em;
+                    padding-right: 15em;
+                }
+                @media (max-width: 1400px) {
+                    p {
+                        padding-left: 10em;
+                        padding-right: 10em;
+                    }    
+                }
+                @media (max-width: 992px) {
+                    p {
+                        padding-left: 1em;
+                        padding-right: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

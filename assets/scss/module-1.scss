@@ -1,0 +1,180 @@
+@use "mixins" as mix;
+
+.prescription-img-dog {
+    background-image: mix.$dog-vet-1x;
+    @media (min-width: 992px) {
+        background-image: mix.$dog-vet-2x;
+    }
+    @include mix.background-prop;
+    background-size: contain;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: auto;
+    top: 3vh;
+    padding: 12vw 0em;
+}
+.prescription-text-pos {
+    top: 3vw;
+    left: -4vw;
+    position: relative;
+    padding-bottom: 10vw;
+    .prescription-heading {
+        color: mix.$color-grass-1;
+        position: relative;
+        padding-right: 1em;
+        padding-bottom: 1em;
+        left: 3vh;
+        font-size: 2vw;
+        box-sizing: border-box;
+        float: left;
+    }
+    .buttons-pos {
+        width: auto;
+        .option {
+            font-size: 1.5vh;
+            text-transform: capitalize;
+            text-align: start;
+            border: none;
+            border-radius: 25px;
+            background-color: mix.$color-salmon-2;
+            color: mix.$color-white-1;
+            padding: 0.5em 2em 0.7em 3em;
+            margin: 0em 1em 1em 1em;
+            display: inline-flex;
+            &:hover {
+                background: mix.$color-salmon;
+            }
+        
+        }
+        .option.prescription {
+            &:before {
+                content: "";
+                @include mix.background-prop;
+                background-size: contain;
+                display: inline-block;
+                position: relative;
+                right: 1em;
+                width: 3vw;
+                height: 3vh;
+            }
+        }
+        .option.prescription.whats {
+            &:before {
+                background-image: mix.$icon-whats;
+            }
+        }
+        .option.prescription.messenger {
+            &:before {
+                background-image: mix.$icon-messenger;
+            }
+        }
+        .option.prescription.chat {
+            &:before {
+                background-image: mix.$icon-chat;
+            }
+        }
+        .option.prescription.telegram {
+            &:before {
+                background-image: mix.$icon-telegram;
+            }
+        }
+        .option.prescription.form {
+            &:before {
+                background-image: mix.$icon-form;
+            }
+        }
+        .option.prescription.call {
+            &:before {
+                background-image: mix.$icon-call;
+            }
+        }
+        @media (max-width: 991px) {
+            .option {
+                margin: 0em 1em 1em -0.5em;
+                width: 100%;
+                display: inline;
+                text-align: left;
+                font-size: 4vh;
+                border-radius: 50px;
+            }
+            .option.prescription {
+                &:before {
+                    top: 0.4em;
+                    width: 12vh;
+                    height: 6vh;
+                    right: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .prescription-text-pos {
+        left: 0;
+        .prescription-heading {
+            margin-bottom: 0;
+            p {
+                text-align: center;
+                margin-right: 1em;
+            }
+        }
+        .buttons-pos {
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+            .option {
+                font-size: 1.5vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .prescription-img-dog {
+        padding: 30% 0em;
+        top: 0;
+    }
+    .prescription-text-pos {
+        display: flex;
+        flex-direction: column;
+        left: 2vh;
+        padding-right: 3vw;
+        .prescription-heading {
+            font-size: 4.5vh;
+            position: relative;
+            padding-right: 2em;
+        }
+        .buttons-pos {
+            width: auto;
+            .option {
+                font-size: 3.5vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .prescription-text-pos {
+        .prescription-heading {
+            font-size: 3.5vh;
+        }
+        .buttons-pos {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            .option {
+                font-size: 3vh;
+            }
+            .option.prescription {
+                &:before {
+                    width: 3vh;
+                    height: 4vh;
+                }
+            }
+        }
+    }
+}

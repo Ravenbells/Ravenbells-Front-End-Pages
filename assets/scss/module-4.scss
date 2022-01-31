@@ -1,0 +1,227 @@
+@use "mixins" as mix;
+
+.background-clouds-pink {
+   @include mix.background-prop;
+   background-image: mix.$clouds-pink;
+   background-size: cover;
+   width: 100%;
+   height: auto;
+   @media (max-width: 992px) {
+       background-image: mix.$clouds-pink-2;
+   }
+   .heading-1,
+   .heading-2
+   {
+    color: mix.$color-white-1;
+    text-align: center;
+    position: relative;
+   }
+   .heading-1 {
+      font-size: 3.5vw;
+      padding-top: 1.5em;
+      right: 1.5em;
+      &:before {
+          content: "";
+          @include mix.background-prop;
+          background-size: contain;
+          background-image: mix.$heart-white;
+          width: 10vw;
+          height: 10vh;
+          top: 0.3em;
+          left: 0.2em;
+          transform: rotate(-22deg);
+          position: relative;
+          display: inline-block;
+        }
+      @media (max-width: 992px) {
+          font-size: 10vw;
+          right: 0;
+          padding-top: 28vw;
+          padding-right: 2em;
+          padding-left: 0em;
+          left: 1em;
+          &:before {
+            width: 10vw;
+            height: 11vh;
+            top: -0.5vh;
+            left: -0.2em;
+            transform: rotate(-65deg);
+        }
+      }
+      @media (max-width: 992px) {
+        &:before {
+            width: 16vw;
+            height: 10vh;
+            top: 2.5vh;
+            left: -0.2em;
+            transform: rotate(-65deg);
+        }
+      }
+
+    }
+   .heading-2 {
+        font-size: 1.8vw;
+        font-weight: 700;
+        padding: 1em 11em 0em 11em;
+        box-sizing: content-box;
+        @media (max-width: 992px) {
+            padding: 1em 2em 1em 2em;
+            font-size: 4vw;
+            font-weight: 300;
+        }
+    }
+    .paw-bubbles-pos {
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        top: -4em;
+        @media (max-width:992px) {
+            display: flex;
+            flex-direction: column;
+            top: 0;
+        }
+        .tns-nav {
+            position: relative;
+            margin: 0vh auto;
+            padding-top: 4em;
+            padding-bottom: 3em;
+            text-align: center;
+            right: 20%;
+            width: 55%;
+            display: block;
+            @media (max-width: 700px) {
+                padding-top: 20em;
+            }
+            button,
+            .tns-nav-active
+            {
+                border: 2px solid mix.$color-moss;
+                border-radius: 50%;
+                display: inline-block;
+                width: 3vw;
+                height: 3vw;
+            }
+            button {
+                padding: 9px;
+                margin-left: 1em;
+                background: transparent;
+                &.tns-nav-active {
+                    background-color: mix.$color-moss;                
+                }
+            }
+            @media (max-width:700px) {
+                margin-top: -35vh;
+            }
+        }
+        .paw-carousel {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            .paw-bubbles {
+                margin: 0 auto;
+                @media (max-width:992px) {
+                    padding-bottom: 5em;
+                }
+                .bubble-background {
+                    background-color: mix.$color-white-1;
+                    border-radius: 50px;
+                    display: inline-block;
+                    width: 100%;
+                    height: auto;
+                    padding: 7vw 0em 5em 0em;
+                    @media (max-width: 992px) {
+                        box-shadow: 10px 10px 0px mix.$color-salmon;
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        margin: 0 auto;
+                        left: -30vw;
+                        top: 200px;
+                        padding-right: 0;
+                        width: 40%;
+                        height: auto !important;
+                    }
+                    @media (max-width: 700px) {
+                        top: 450px;
+                    }
+                    .title {
+                        display: block;
+                        font-size: 3vw;
+                        text-align: center;
+                        padding-top: 0;
+                        color: mix.$color-moss;
+                        @media (max-width: 992px) {
+                            font-size: 5vw;
+                            padding-top: 2.5em;
+                        }
+                        @media (max-width: 700px) {
+                            padding-top: 3em;
+                            @media (min-height: 800px) {
+                                padding-top: 4.5em;
+                            }   
+                        }
+                    }
+                    .description {
+                        display: inline-block;
+                        font-size: 1vw;
+                        text-align: center;
+                        line-height: 2.5;
+                        color: mix.$color-less-dark-grey;
+                        padding: 2em;
+                        @media (max-width: 992px) {
+                            font-size: 3vw;
+                        }
+                    }
+                }
+                .paw-img {
+                    @include mix.background-prop;
+                    background-size: contain;
+                    background-image: mix.$dog-paw;
+                    width: 20vw;
+                    height: 30vh;
+                    top: 12vh;
+                    margin: 0 auto;
+                    display: block;
+                    position: relative;
+                    @media (max-width: 992px) {
+                        display: inline-block;
+                        position: absolute;
+                        width: 30vw;
+                        height: 40vh;
+                        left: 33vw;
+                        top: 105px;
+                        z-index: 1;
+                    }
+                    @media (max-width: 700px) {
+                        top: 330px;
+                        padding-top: 5em;
+                        right: 93vw;
+                    }
+                    @media (max-width: 400px) {
+                        top: 320px;
+                        right: 30em;
+                    }
+                    @media (max-width: 992px) {
+                        @media (min-width: 730px) {
+                            @media (min-height: 850px) {
+                                top: 46px;
+                            }
+                        }    
+                    }
+                }
+            }
+            .tns-item {
+                height: max-content;
+                bottom: 9em;
+                position: relative;
+                @media (max-width: 700px) {
+                    bottom: 20em;
+                }
+                @media (max-width: 600px) {
+                    bottom: 25em;
+                }
+            }
+        }
+    }
+}

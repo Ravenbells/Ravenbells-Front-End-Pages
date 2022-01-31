@@ -1,0 +1,109 @@
+$top-bar: -1.2em;
+$bottom-bar: 1.2em;
+$background-menu: #F5F5F5;
+$border-top-menu: 8em solid #8CB54E;
+
+@mixin animations {    
+    @keyframes roll_list {
+        0% {
+            left: 200%;
+        }
+        100% {
+            left: 0%;
+        }
+    }
+
+    @keyframes roll_list_r {
+        0% {
+            left: 0%;
+            background: $background-menu;
+            border-top: $border-top-menu;
+        }
+        50% {
+            left: 80%;
+            background: $background-menu;
+            border-top: $border-top-menu;
+        }
+        100% {
+            left: 200%;
+        }
+    }
+
+    @keyframes roll_bar-center {
+        0% {
+            background-color: #fff;
+        }
+        100% {
+            background: transparent;
+        }
+    }
+
+    @keyframes roll_bar-center_r {
+        0% {
+            background: transparent;
+        }
+        100% {
+            background-color: #fff;
+        }
+    }
+
+    @keyframes roll_bar-top {
+        0% {
+            margin-top: $top-bar;
+            transform: rotate(0deg);
+        }
+        50% {
+            margin-top: 0;
+            transform: rotate(0deg);
+        }
+        100% {
+            margin-top: 0;
+            transform: rotate(45deg);
+        }
+    }
+
+    @keyframes roll_bar-top_r {
+        0% {
+            margin-top: 0;
+            transform: rotate(45deg);
+        }
+        50% {
+            margin-top: 0;
+            transform: rotate(0deg);
+        }
+        100% {
+            margin-top: $top-bar;
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes roll_bar-bottom {
+        0% {
+            margin-top: $bottom-bar;
+            transform: rotate(0deg);
+        }
+        50% {
+            margin-top: 0;
+            transform: rotate(0deg);
+        }
+        100% {
+            margin-top: 0;
+            transform: rotate(-45deg);
+        }
+    }
+
+    @keyframes roll_bar-bottom_r {
+        0% {
+            margin-top: 0;
+            transform: rotate(-45deg);
+        }
+        50% {
+            margin-top: 0;
+            transform: rotate(0deg);
+        }
+        100% {
+            margin-top: $bottom-bar;
+            transform: rotate(0deg);
+        }
+    }
+}

@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    overflow-x: clip;
+    max-width: 100%;
+}
+body {
+    position: relative;
+}
+
+
+/*       COLORS PALLET       */
+$color-white-1: #fff;
+$color-white-2: #F5F5F5;
+$color-white-3: #FAFAFA;
+$color-grass-1: #8CB54E;
+$color-grass-2: #7EA248;
+$color-moss: #15351A;
+$color-salmon: #E6857B;
+$color-salmon-2: #F28B83;
+$color-light-salmon: #FDB8B1;
+$color-light-pink: #F8BDA7;
+$color-dark-blue: #001922;
+$color-grey: #909090;
+$color-dark-grey: #5A5A5A;
+$color-less-dark-grey: #7A7A7A;
+$color-less-light-grey: #BEBDBD;
+$color-light-grey: #D8D8D8;
+$color-black-to-grey: #292929;
+$color-low-black: #00000029;
+$color-black: #000;
+
+/*       FONTS         */
+@font-face {
+    font-family: "Lemon Friday";
+    src: url("/assets/fonts/Lemon-Friday/Lemon_Friday.ttf") type("truetype");
+    src: url("../fonts/Lemon-Friday/Lemon_Friday.ttf") type("truetype");
+    src: url("/assets/fonts/Lemon-Friday/Lemon_Friday.woff") format("woff");
+    src: url("../fonts/Lemon-Friday/Lemon_Friday.woff") format("woff");
+    font-size: normal;
+    font-weight: 400;
+}
+
+.lemon-font {
+    font-family: Lemon Friday, Arial, Helvetica, sans-serif;
+}
+.filson-font {
+    font-family: filson-pro, Arial, Helvetica, sans-serif;
+}
+
+
+/*       IMAGES-PNG        */
+$green-cat-1x: url("../img/icons/green_cat_1x.png");
+$green-cat-2x: url("../img/icons/green_cat_2x.png");
+$logo-milipet-1x: url("../img/icons/logo_milipet-1x.png");
+$logo-milipet-2x: url("../img/icons/logo_milipet-2x.png");
+$logo-milipet-3x: url("../img/icons/logo_milipet-3x.png");
+$logo-milipet-4x: url("../img/icons/logo_milipet-4x.png");
+$dog-vet-1x: url("../img/background/dog_vet-1x.png");
+$dog-vet-2x: url("../img/background/dog_vet-2x.png");
+
+
+/*       IMAGES-SVG        */
+$icon-whats: url("../img/svg/icon-whats.svg");
+$icon-messenger: url("../img/svg/icon-messenger.svg");
+$icon-chat: url("../img/svg/icon-chat.svg");
+$icon-telegram: url("../img/svg/icon-telegram.svg");
+$icon-form: url("../img/svg/icon-form.svg");
+$icon-call: url("../img/svg/icon-call.svg");
+$clouds-green: url("../img/svg/clouds-green.svg");
+$clouds-green-2: url("../img/svg/clouds-green-2.svg");
+$clouds-pink: url("../img/svg/clouds-pink.svg");
+$clouds-pink-2: url("../img/svg/clouds-pink-2.svg");
+$quo-mark-white-l: url("../img/svg/quotation-marks-white-l.svg");
+$quo-mark-white-r: url("../img/svg/quotation-marks-white-r.svg");
+$quo-mark-green-l: url("../img/svg/quotation-marks-green-l.svg");
+$quo-mark-green-r: url("../img/svg/quotation-marks-green-r.svg");
+$bubble-clock: url("../img/svg/bubble01-clock.svg");
+$bubble-star: url("../img/svg/bubble02-star.svg");
+$bubble-price: url("../img/svg/bubble03-price.svg");
+$heart-green: url("../img/svg/heart_green.svg");
+$heart-green-2: url("../img/svg/heart_green_2.svg");
+$heart-white: url("../img/svg/heart_white.svg");
+$dog-pink-1: url("../img/svg/dog_pink.svg");
+$dog-pink-2: url("../img/svg/dog_pink-2.svg");
+$dog-paw: url("../img/svg/paw.svg");
+$cat-blue: url("../img/svg/cat_blue.svg");
+$email-letter: url("../img/svg/email-letter.svg");
+$question-bubble-green: url("../img/svg/question_bubble_green.svg");
+$arrow-down-pink: url("../img/svg/arrow_down_pink.svg");
+$social-media-facebook: url("../img/svg/social-media-facebook.svg");
+$social-media-instagram: url("../img/svg/social-media-instagram.svg");
+
+
+@mixin background-prop {
+    background-position: center;
+    background-repeat: no-repeat;
+}
