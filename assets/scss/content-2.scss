@@ -1,0 +1,423 @@
+@use "mixins" as mix;
+
+.content-2 {
+    background-color: mix.$color-black;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    .title {
+        color: mix.$color-white;
+        font-weight: mix.$font-bold-size;
+        font-size: 5vw;
+        text-shadow: 0px 2px, 0px 1px, 0px 0px 0px mix.$color-white;
+    }
+    .title.switch-color {
+        color: mix.$color-blue;
+    }
+    @media (max-width: 991px) {
+        .title {
+            font-size: 10vw;
+            line-height: 1.1;
+        }
+    }
+    .grupo-jobs-logos {
+        .grupo-jobs-logos-pos {
+            padding: 0vw 0vh 0vw 6vh;
+            position: relative;
+            @media (max-width: 991px) {
+                padding: 0 0 0 2em;
+            }
+            .grupo-blocks {
+                width: 14%;
+                @media (max-width:991px) {
+                    background-color: mix.$color-dkgrey; 
+                    border-radius: 10px;
+                    color: mix.$color-white;
+                    margin-bottom: 1em;
+                    padding: 0.3em 0;
+                    position: relative;
+                    width: 100%;
+                }
+                .title,
+                .description,
+                .colaborators 
+                {
+                    text-align: center;
+                    text-shadow: none;
+                    @media (min-width: 992px) {
+                        display: none;
+                    }
+                }
+                .title {
+                    padding-left: 1em;
+                    padding-right: 0;
+                    font-size: 5vw;
+                    font-weight: mix.$font-bold-size;
+                }
+                .jobsway,
+                .logoway {
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    top: 0vw;
+                    left: 0vw;
+                }
+                .jobsway {
+                    background-color: transparent;
+                    border: 0px transparent;
+                    box-sizing: border-box;
+                    padding: 0;
+                    margin: 0 auto;
+                    cursor: pointer;
+                    position: relative;
+                    svg {
+                        display: none;
+                    }
+                    @media (min-width: 992px) {
+                        svg {
+                            display: block;
+                            height: 9vw;
+                            width: 100%;
+                        }
+                        &:focus {
+                            outline: none;
+                            border: none;
+                        }    
+                    }
+                    @media (max-width: 991px) {
+                        background-image: none;
+                        background-color: transparent;
+                        border: 0.5vw solid mix.$color-blue;
+                        border-radius: 50%;
+                        width: unset;
+                        min-height: unset;
+                        padding-right: 15px;
+                        padding-left: 15px;
+                        &:after,
+                        &.open:after {
+                            position: relative;
+                            display: block;
+                            font-size: 5vw;
+                            font-weight: mix.$font-regular;
+                            color: mix.$color-blue;
+                        }
+                        &:after {
+                            content: "+";
+                            margin: -2.2vw 0vw 0vw 0vw;
+                        }
+                        &.open:after {
+                            content: "-";
+                            margin: -2.7vw 0vw 0vw 0vw;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    &.slider-active {
+                        outline: transparent;
+                        transform: 0.5s;
+                        svg {
+                            .a,
+                            .b {
+                                fill: mix.$color-blue;
+                                stroke: mix.$color-blue;
+                            }
+                        }
+                    }
+                    .logoway {
+                        position: absolute;
+                        width: 90%;
+                        height: 9vw;
+                        @media (max-width: 991px) {
+                            display: none;
+                        }
+                    }
+                }
+                .jobsway.jobsteam {
+                    z-index: 0;
+                    left: 0.8vh;          
+                    .logoway.jobsteam {
+                        background-image: mix.$jobspace1x-logo;
+                        @media (min-width: 991px) {
+                            background-image: mix.$jobspace2x-logo;
+                        }
+                        margin: 0vw 0vw 0vw 1.5vw;
+                        width: 60%;
+                    }
+                }
+                .jobsway.jobsx {
+                    z-index: 1;
+                    left: -0.5vh;
+                    .logoway.jobsx {
+                        background-image: mix.$jobsx1x-logo;
+                        @media (min-width: 991px) {
+                            background-image: mix.$jobsx2x-logo;
+                        }
+                        margin: 0vw 0vw 0vw 1.2vw;
+                        width: 60%;
+                    }
+                }
+                .jobsway.jobscommerce {
+                    z-index: 2;
+                    left: -1.5vh;
+                    .logoway.jobscommerce {
+                        background-image: mix.$jobscommerce1x-logo;
+                        @media (min-width: 991px) {
+                            background-image: mix.$jobscommerce2x-logo;
+                        }
+                        margin: 0vw 0vw 0vw 0vw;
+                    }   
+                }
+                .jobsway.jobs-domatech {
+                    z-index: 3;
+                    left: -2.5vh;
+                    .logoway.jobs-domatech {
+                        background-image: mix.$domatech1x-logo;
+                        @media (min-width: 991px) {
+                            background-image: mix.$domatech2x-logo;
+                        }
+                        margin: 0vw 0vw 0vw 0.2vw;
+                    }
+                }
+                .jobsway.jobs-lion {
+                    z-index: 4;
+                    left: -3.5vh;
+                    .logoway.jobs-lion {
+                        background-image: mix.$lion1x-logo;
+                        @media (min-width: 991px) {
+                            background-image: mix.$lion2x-logo;
+                        }
+                        margin: 0vw 0vw 0vw 0vw;
+                    }   
+                }
+                .jobsway.jobs-peopleview {
+                    z-index: 5;
+                    left: -4.5vh;
+                    .logoway.jobs-peopleview {
+                        background-image: mix.$peopleview1x-logo;
+                        @media (min-width: 991px) {
+                            background-image: mix.$peopleview2x-logo;
+                        }
+                        margin: 0vw 0vw 0vw 0vw;
+                    }
+                }
+                .jobsway.jobs-deupetch {
+                    z-index: 6;
+                    left: -5vh;
+                    .logoway.jobs-deupetch {
+                        background-image: mix.$deupetch1x-logo;
+                        @media (min-width: 991px) {
+                            background-image: mix.$deupetch2x-logo;
+                        }
+                        margin: 0vw 0vw 0vw 0.5vw;
+                    }   
+                }
+                .jobsway {
+                    &:nth-child(1n) {
+                        @media (max-width: 991px) {
+                            background-image: none;
+                            left: 0;
+                            z-index: 0;
+                            height: 4vw;
+                            width: 4vw;
+                            margin: 5px auto;
+                            float: right;
+                            margin-top: 0.5vh;
+                            margin-right: 0.5em;
+                            padding: 0;
+                        }
+                    }
+                }
+                .blocks-content {
+                    display: none;
+                    @media (max-width: 991px) {
+                        border-top: 1px solid mix.$color-smthgrey;
+                        margin-top: 0px;
+                        padding-left: 15px;
+                        padding-right: 15px;
+                        height: 0;
+                        opacity: 0;
+                        display: block;
+                        &.open {
+                            margin-top: 10px;
+                            height: auto;
+                            opacity: 1;
+                        }   
+                        .colaborators {
+                            font-weight: mix.$font-bold-size;
+                            font-size: 3.5vw;
+                            padding-top: 0.5em;
+                        }
+                        .description {
+                            font-weight: mix.$font-regular-size;
+                            font-size: 2.5vw;
+                            padding: 10px 14px 0px 15px;
+                        }
+                        .img-pos {
+                            .img {
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                width: auto;
+                                height: 6vw;
+                                display: block;
+                            }
+                            .img.n1 {
+                                background-image: mix.$gsr1x-logo;
+                            }
+                            .img.n2 {
+                                background-image: mix.$above1x-logo;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .info-carousel {
+        box-sizing: content-box;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        position: relative;
+        @media (max-width: 991px) {
+            display: none;
+        }
+        .info-carousel-pos {
+            margin: 0 auto;
+            padding: 0 0 5em 0;
+            @media (max-width: 1200px) {
+                padding: 0 0 9em 0;
+            }
+            transform-style: preserve-3d;
+            .slide-carousel {
+                height: 30vh;
+                .content-carousel {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    height: auto;
+                    min-height: 40em;
+                    opacity: 0;
+                }
+                .content-carousel.initial,
+                .content-carousel.active
+                {
+                    opacity: 1;
+                    position: relative;
+                }
+                .content-carousel.next,
+                .content-carousel.before  
+                {
+                    transition: 1s;
+                    opacity: 0;
+                }
+                /* .content-carousel.prev {
+                    transform: translateX(100%);
+                }
+                .content-carousel.next {
+                    transform: translateX(-100%);
+                }
+                .content-carousel.before {
+                    transform: translateX(-100%);
+                } */
+                .content-carousel.active {
+                    /* transform: translateX(0%); */
+                    transition: 1s;
+                }
+                .slide-block { 
+                    position: absolute;
+                    z-index: 100;
+                    transition: transform .5s, opacity .5s, z-index .5s;
+                    .title.slick, 
+                    .colaborators.slick {
+                        font-size: 4vh;
+                        font-weight: mix.$font-bold-size;
+                    }
+                    .title.slick {
+                        color: mix.$color-white;
+                    }
+                    .description.slick {
+                        color: mix.$color-white;
+                        text-align: justify;
+                        display: inline-block;
+                    }
+                    .colaborators.slick {
+                        color: mix.$color-grey;
+                        font-weight: mix.$font-bold-size;
+                    }
+                    .img-pos.slick {
+                        padding: 20vh 5vw 0vw 0vh;
+                        .img.slick {
+                            background-position: center;
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 8vw;
+                            height: 8vh;
+                            margin: 0vh 0vw 0vw 0vh;
+                        }
+                        .img.slick.gsr {
+                            background-image: mix.$gsr1x-logo;
+                            width: 4vw;
+                            height: 4vh;
+                        }
+                        .img.slick.above {
+                            background-image: mix.$above1x-logo;
+                            width: 3vw;
+                            height: 3vh;
+                        }
+                        .img.slick.miligrama {
+                            background-image: mix.$miligrama1x-logo;
+                            width: 3.5vw;
+                            height: 3.5vh;
+                        }
+                        .img.slick.jobsx {
+                            background-image: mix.$jobsx1x-logo;
+                            width: 10vw;
+                            height: 10vh;
+                        }
+                        .img.slick.organnact {
+                            background-image: mix.$organnact1x-logo;
+                            width: 10vw;
+                            height: 10vh;
+                        }
+                        .img.slick.jobsteam {
+                            background-image: mix.$jobspace1x-logo;
+                        }
+                    }
+                }
+            }
+        }
+        .dots-carousel {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 0 0 6em 0;
+            margin: 0 auto;
+            right: 1vw;
+            justify-content: center;
+        }
+        .dots-carousel .dots {
+            background-color: transparent;
+            border: 3px solid mix.$color-blue;
+            border-radius: 50%;
+            display: inline-block;
+            width: 2vh;
+            height: 2vh;
+            margin: 0em 1em 0em 1em;
+        }
+        .dots-carousel .dots.filled {
+            background-color: mix.$color-blue;
+            border-color: mix.$color-blue;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .content-2,
+    .content-2 .container,
+    .content-2 .row
+    {
+        padding: 0;
+    }
+}

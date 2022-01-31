@@ -1,0 +1,211 @@
+/**             General           **/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*           Some variables to make easy the coding right up       */
+
+/* -------  COLORS  -------- */
+
+$color-white: #fff; /* White */
+$color-black: #000; /* Black */
+$color-clblack: #000107; /* Close Black */
+$color-dkblue: #010C16; /* Dark Blue */
+$color-smthblue: rgb(34, 196, 255); /* Smooth Blue */
+$color-blue: #3F9EEC; /* Blue */
+$color-grey: #707070; /* Grey */
+$color-ligrey:#A59E9E; /* Light Grey */
+$color-smthgrey: #4d4d4d; /* Smooth Grey */
+$color-dkgrey: #323237; /* Dark Grey */
+
+/* -------  FONTS  -------- */
+
+@font-face {
+    font-family:"AmsiPro";
+    src: url(../fonts/Amsipro/AmsiPro-Italic.ttf) format("truetype");
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family:"AmsiPro";
+    src: url(../fonts/Amsipro/AmsiPro-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family:"AmsiPro";
+    src: url(../fonts/Amsipro/AmsiPro-Bold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "AmsiPro";
+    src: url(../fonts/Amsipro/AmsiProNarw-Ultra.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 800;
+}
+
+$font-AmsiPro: AmsiPro, Arial, Helvetica, sans-serif;
+$font-bold-size: 600;
+$font-regular-size: 400;
+$font-bold: bold;
+$font-regular: regular;
+$font-uppercase: uppercase;
+
+
+/* -------  PNG  -------- */
+$background-main-1x: url("../img/background/png/main-1x.png");
+$background-main-2x: url("../img/background/png/main-2x.png");
+$background-main-mobile: url("../img/background/png/main-mobile.png");
+$wildcard-img-1x: url("../img/background/png/wildcard-img-1x.png");
+$wildcard-img-2x: url("../img/background/png/wildcard-img-2x.png");
+
+/* -------  LOGOS  -------- */
+/**         max-width:991px        **/
+
+$jobspace1x-logo: url("../img/icons/logos/jobs_1x.png");
+$jobsx1x-logo: url("../img/icons/logos/jobsx_1x.png");
+$jobscommerce1x-logo: url("../img/icons/logos/jobscommerce_1x.png");
+$domatech1x-logo: url("../img/icons/logos/domatech_1x.png");
+$lion1x-logo: url("../img/icons/logos/lion_1x.png");
+$peopleview1x-logo: url("../img/icons/logos/peopleview_1x.png");
+$deupetch1x-logo: url("../img/icons/logos/deupetch_1x.png");
+$gsr1x-logo: url("../img/icons/logos/baterias_1x.png");
+$above1x-logo: url("../img/icons/logos/above_1x.png");
+$miligrama1x-logo: url("../img/icons/logos/miligrama_1x.png");
+$organnact1x-logo: url("../img/icons/logos/organnact_1x.png");
+
+
+/* -------  LOGOS  -------- */
+/**         min-width:992px        **/
+
+$jobspace2x-logo: url("../img/icons/logos/jobs_2x.png");
+$jobsx2x-logo: url("../img/icons/logos/jobsx_2x.png");
+$jobscommerce2x-logo: url("../img/icons/logos/jobscommerce_2x.png");
+$domatech2x-logo: url("../img/icons/logos/domatech_2x.png");
+$lion2x-logo: url("../img/icons/logos/lion_2x.png");
+$peopleview2x-logo: url("../img/icons/logos/peopleview_2x.png");
+$deupetch2x-logo: url("../img/icons/logos/deupetch_2x.png");
+$gsr2x-logo: url("../img/icons/logos/baterias_2x.png");
+$above2x-logo: url("../img/icons/logos/above_2x.png");
+$miligrama2x-logo: url("../img/icons/logos/miligrama_2x.png");
+$organnact2x-logo: url("../img/icons/logos/organnact_2x.png");
+
+
+/* -------  SVG  -------- */
+
+$background-white-circle: url("../img/background/svg/white-circle-edge.svg");
+$background-white-circle-2: url("../img/background/svg/white-circle-edge-2.svg");
+$background-blue-rect: url("../img/background/svg/wildcard-bgrd.svg");
+$arrow-blue-down: url(../img/icons/svg/south_black_24dp.svg);
+$circle-way-svg-01: url("../img/icons/svg/Caminho_16.svg");
+$circle-way-svg-02: url("../img/icons/svg/Caminho_17.svg");
+$circle-way-svg-03: url("../img/icons/svg/Caminho_18.svg");
+$circle-way-svg-04: url("../img/icons/svg/Caminho_19.svg");
+$circle-way-svg-05: url("../img/icons/svg/Caminho_22.svg");
+$circle-way-svg-06: url("../img/icons/svg/Caminho_21.svg");
+$circle-way-svg-07: url("../img/icons/svg/Caminho_23.svg");
+$circle-way-svg-08: url("../img/icons/svg/Caminho_20.svg");
+$icon-facebook: url("../img/icons/svg/icon-facebook.svg");
+$icon-instagram: url("../img/icons/svg/icon-instagram.svg");
+$icon-linkedin: url("../img/icons/svg/icon-linkedin.svg");
+$icon-mail: url("../img/icons/svg/icon-ios-mail.svg");
+
+
+/**          Responsive Mixins           **/
+@mixin res-logo-img {
+    @media (min-width:992px) {
+        width: 20vh;
+    }
+    @media (max-width:991px) {
+        width: 20vw;
+    }
+    @media (max-width:768px) {
+        width: 20vw;
+    }
+    @media (max-width:576px) {
+        width: 20vw;
+    }
+}
+
+@mixin res-logo-img-footer {
+    @media (min-width:992px) {
+        width: 15vh;
+    }
+    @media (max-width:991px) {
+        width: 20vw;
+    }
+    @media (max-width:768px) {
+        width: 20vw;
+    }
+    @media (max-width:576px) {
+        width: 20vw;
+    }
+}
+
+    /**         COMMON BUTTONS        **/
+@mixin button-blue {
+    color: $color-blue; 
+    border: 2px solid $color-blue;
+    border-radius: 10em;
+    padding: 10px 30px 10px 50px;
+    transition: 0.5s;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        color: $color-white;
+        background-color: $color-blue;
+        filter: brightness(1) contrast(1.10);
+    }
+    &:after {
+        content: "";
+        background: $arrow-blue-down;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 2em;
+        height: 2vh;
+        margin-top: 3px;
+        display: inline-flex;
+        flex-direction: row;
+    }
+    &:hover:after {
+        filter: brightness(100);
+        position: relative;
+    }
+    @media (max-width: 576px) {
+        padding: 5px 6vw 5px 9vw;
+        margin-top: 0;
+        font-size: 5vw;
+        &:after {
+            width: 8vw;
+            height: 5vw;
+            padding-left: 1em;
+            top: 3px;
+            position: relative;
+        }
+    }
+}
+
+@mixin send-button {
+    font-size: 1vw;
+    font-weight: $font-bold-size;
+    color: $color-blue;
+    background: transparent;
+    border: 2px solid $color-blue;
+    border-radius: 75px;
+    margin: 0 auto;
+    float: right;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        color: $color-white;
+        background-color: $color-blue;
+        filter: brightness(1) contrast(1.10);
+    }
+}

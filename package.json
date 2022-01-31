@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.1.1",
+    "jquery": "^3.6.0",
+    "sass": "^1.41.0"
+  },
+  "name": "lp-grupo-jobs",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobspacecreative/lp-grupo-jobs.git"
+  },
+  "author": "Jobs Space - Ravenbells",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jobspacecreative/lp-grupo-jobs/issues"
+  },
+  "homepage": "https://github.com/jobspacecreative/lp-grupo-jobs#readme",
+  "description": ""
+}
